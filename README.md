@@ -1,32 +1,27 @@
 ## How to install Airflow on Docker | Setting Up Airflow with Docker-Compose
 
 ### **1. Install Docker**
-- Download and install Docker Desktop: https://www.docker.com/products/docker-desktop
+- Download and install Docker Desktop from the official website:
+  https://www.docker.com/products/docker-desktop
+- After installation, make sure Docker is running.
 
-### **2. Clone Airflow Official Docker Example**
-- Jalankan perintah berikut:
+### **2. Clone the Ready-to-Use Repository**
+- Clone the repository that already includes the Airflow Docker setup:
   ```bash
-  git clone https://github.com/apache/airflow.git
-  cd airflow
-  cd scripts/in_container/config
-  cp .env.example .env
-  cd ../../..
+  git clone git@github.com:MuhammadJundullah/rmsimangat-etl-pipeline.git
+  cd rmsimangat-etl-pipeline
   ```
 
-### **3. Jalankan Docker Compose**
-- Masuk ke folder `docker-compose`:
-  ```bash
-  cd airflow/docker-compose
-  ```
-- Jalankan service:
+### **3. Run Docker Compose**
+- Initialize Airflow and start the services:
   ```bash
   docker compose up airflow-init
   docker compose up -d
   ```
 
-### **4. Akses Airflow Web UI**
-- Buka browser dan akses: `http://localhost:8080`
-- Login menggunakan:
+### **4. Access Airflow Web UI**
+- Open your browser and go to: `http://localhost:8080`
+- Login credentials:
   - Username: `airflow`
   - Password: `airflow`
 
